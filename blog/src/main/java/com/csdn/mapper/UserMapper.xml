@@ -13,7 +13,11 @@
 	<insert id="insertUser" parameterType="com.csdn.domain.User">
 		insert into  t_user(account,psw) value(#{account},#{psw}); 
 	</insert>
-
+	
+	<select id="selectInfoByEmail"  resultType="com.csdn.domain.User">
+		 select account,psw from  t_user where email=#{0};
+	</select>
+	
 	<!-- <resultMap id="userDTOMap" type="com.csdn.dto.UserDTO">
 		<id column="account" property="account" jdbcType="STRING" />
 		<result column="USER_NAME" property="userName" jdbcType="CHAR" />

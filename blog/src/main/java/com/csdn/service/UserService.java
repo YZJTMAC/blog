@@ -10,4 +10,6 @@ import com.csdn.domain.User;
  */
 public interface UserService {
 	User selectUserByAccount(String account,String psw);
+	
+	User selectInfoByEmail(String email);
 }

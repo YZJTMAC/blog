@@ -5,9 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+ li{
+list-style-type: none;
+display: inline;
+ }
+</style>
 </head>
 <body>
-		<h2>sdfsf</h2>
+	${message}
 	<form action="login.action" method="post">
 		<p>
 			Account: <input type="text" name="account" />
@@ -15,7 +21,11 @@
 		<p>
 			Password: <input type="text" name="psw" />
 		</p>
-		<input type="submit" value="Submit" />
+		<ul>
+			<li><input type="submit" value="Submit"  id="submit"/></li>
+			<li><a href="go_registered_account.action" target="_blank" id="registered">注册</a></li>
+			<li><a href="go_find_psw.action" target="_blank" id="find">找回密码</a></li>
+		</ul>
 	</form>
 </body>
 </html>

@@ -10,11 +10,26 @@ import com.csdn.domain.User;
 public class UserMapperImpl implements UserMapper {
 	@Autowired
 	SqlSession SqlSession;
+	UserMapper userMapper ;
 	@Override
 	public User selectUserByAccount(String account,String psw) {
-		 UserMapper userMapper =  SqlSession.getMapper(UserMapper.class);
+		createUserMapper();
 		 User userDTO = userMapper.selectUserByAccount(account,psw);
 		return userDTO;
 	}
-
+	@Override
+	public User selectInfoByEmail(String email) {
+		createUserMapper();
+		User user = userMapper.selectInfoByEmail(email);
+		return user;
+	}
+	
+	public UserMapper createUserMapper(){
+		if(userMapper==null){
+			userMapper = SqlSession.getMapper(UserMapper.class);
+		}
+		return userMapper;
+	}
+	
+	
 }

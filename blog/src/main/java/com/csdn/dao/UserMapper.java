@@ -6,4 +6,6 @@ public interface UserMapper {
 
 	 User selectUserByAccount(String account,String psw);
 	
+	 User selectInfoByEmail(String email);
+	 
 }

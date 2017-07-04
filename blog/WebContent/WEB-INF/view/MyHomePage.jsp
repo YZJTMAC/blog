@@ -257,7 +257,7 @@ Calendar.prototype = {
 		<div id="div_body_right" class="div_body">
 			<div id="div_body_right_myinfo">
 				<ul>
-					<li>昵称：<a>麦子TMAC</a></li>
+					<li>昵称：<a>${account}</a></li>
 					<li>园龄：<a>11个月</a></li>
 					<li>粉丝：<a>2</a></li>
 					<li>关注：<a>1</a></li>
